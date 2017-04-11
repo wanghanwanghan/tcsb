@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>声纹导入管理</title>
+<link href="{img_path}/css/style.css" rel="stylesheet" type="text/css">
+<script language="javascript" type="text/javascript" src="{js_path}/My97DatePicker/WdatePicker.js"></script>
+
+<SCRIPT language=Javascript> 
+function selecta2(){
+  for(var i=0;i<document.from.elements.length;i++){
+    var e=document.from.elements[i];
+    if((e.name).indexOf('id')!=-1) e.checked=document.from.chkall.checked;
+  }
+}
+</SCRIPT>
+<script>
+function checkAction()
+{
+	 var r=confirm("您确认此操作！");
+     if (r==true)
+     {
+    	return true;
+     }
+     else
+     {
+     return false;
+     }
+}
+</script>
+</head>
+<body>
+<iframe name="ifrm2" style="width:500px; height:400px; display:none" src=""></iframe>
+
+
+<form id="addform" target="ifrm2" name="addform" method="post" action="{postName}" enctype="multipart/form-data">
+<table width="100%" border="0" align="center" cellpadding="3" cellspacing="0" class="table">
+     <tr>
+      <td height="25" colspan="4" align="center" class="title"><strong>用户导入</strong></td>
+    </tr>
+    <input type="hidden" name="leadExcel" value="true">
+    
+    <tr>
+	<td width="17%" align="right">选择文件(*.xls)：</td>
+      <td width="33%">
+        
+        <input type="file" accept="application/msexcel" name="inputExcel">
+       </td>
+    </tr>
+  
+	
+	<tr>
+           <td width="17%" align="right">所属地区：</td>
+      <td width="33%">
+	  <select name="sjg">
+	  <option value="0">请选择所属地区</option>
+	  {sjgDStr}</select></td>
+        
+    </tr>
+	  
+     
+    <tr>
+      <td height="30" colspan="4" align="center"><input name="add" type="submit" class="btn" id="add" value=" 导 入 " /></td>
+    </tr>  
+	
+    <tr>
+	<td height="30" colspan="4" align="center"> 
+      <a href="model.xls"  style="font-size:24px;">下载导入文件模版:model.xls</a>
+	  </td>
+    </tr>  
+	
+</table>
+</form>
+ 
+
+</body></html>

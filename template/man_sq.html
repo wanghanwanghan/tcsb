@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>管理社区</title>
+<link href="{img_path}/css/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="{img_path}/js/jquery.js"></script>
+<script type="text/javascript" src="{img_path}/js/jquery.validate.js"></script>
+<script type="text/javascript" src="{img_path}/js/jquery.metadata.js"></script>
+
+<SCRIPT language=Javascript> 
+function selecta2(){
+  for(var i=0;i<document.from.elements.length;i++){
+    var e=document.from.elements[i];
+    if((e.name).indexOf('id')!=-1) e.checked=document.from.chkall.checked;
+  }
+}
+</SCRIPT>
+<script>
+function checkAction()
+{
+	 var r=confirm("您确认此操作！");
+     if (r==true)
+     {
+    	return true;
+     }
+     else
+     {
+     return false;
+     }
+}
+</script>
+</head>
+<body>
+<iframe name="ifrm2" style="width:500px; height:400px; display:none" src=""></iframe>
+<form id="addform" name="addform" method="post" target="ifrm2" action="{postName}">
+<div style="margin-top:20px">
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="0" class="table">
+    <tr>
+      <td height="25" colspan="4" align="center" class="title"><strong>添加属地</strong></td>
+    </tr>
+	
+	<tr>
+      <td align="right">属地：</td>
+      <td><select name="topClass">
+	  <option value="0">请选择所属地</option>
+	  {topClass}
+	  </select></td>
+	  
+	  
+
+	  
+      <td width="15%" align="right">排序序号：</td>
+      <td width="35%"><input name="orderid" type="text" id="orderid" value="255" size="30" maxlength="5" class="{required:true,messages:{required:' 请输入排序序号'}}"/></td>
+     </tr>
+      <td align="right">属地：</td>
+      <td colspan="3"><input name="title" type="text" id="title" size="30" maxlength="50"/></td>
+    </tr>
+    <tr>
+      <td height="30" colspan="4" align="center"><input name="add2" type="submit" class="btn" id="add2" value=" 添 加 " /></td>
+    </tr>  
+</table>
+</div>
+</form>
+
+<form action="{postName}" method="post" name="from" id="from">
+  <table class="table" cellpadding="3" cellspacing="0" align="center" border="0" width="98%" style="margin-top:20px;">
+    <tbody><tr style="background-color: rgb(255, 255, 255);">
+      <td colspan="8" class="title" align="center"><strong>属地管理</strong></td>
+    </tr>
+	<tr>
+	<td height="49" colspan="6">&nbsp;&nbsp;顶级分类：
+	  <select name="ftidName"><option value="0">请选择</option>{ftidNameStr}</select>&nbsp;&nbsp;&nbsp;&nbsp;名称：<input name="keyword" class="input" size="25" title="请输入查询关键字" id="keyword" type="text">&nbsp;&nbsp;<input name="submit" class="btn" value="查找" type="submit"></td>
+	</tr>
+    <tr style="background-color: rgb(255, 255, 255);">
+      <td align="center" width="5%">ID</td>
+      <td align="center" width="5%">选择</td>
+      <td width="23%" align="center">名称：</td>
+      <td align="center" width="22%">所属类别</td>
+      <td align="center" width="19%">排序</td>
+      <td align="center" width="26%">级别</td>
+
+    </tr>
+    </tbody><tbody class="trcolor">
+	<!--begin-->
+    <tr style="background-color: rgb(255, 255, 255);">
+          <td align="center">{Tid}</td>
+          <td align="center">
+		  <input name="id[]" id="id[]" value="{Tid}" type="checkbox"></td>
+          <td><input name="cnamearr[]" id="cnamearr[]" value="{cname}" type="text"></td>
+          <td align="center">{class}</td>
+          <td align="center"><input name="updateid[]" id="updateid[]" value="{Tid}" type="hidden">
+<input name="orderid[]" id="orderid[]" value="{sorder}" size="5" maxlength="5" onkeyup="value=value.replace(/[^0-9]/g,'1');" type="text"></td>
+        <td align="center">
+		{level}</td>
+      </tr>
+	  <!--end-->
+		</tbody>
+  </table>
+  <table cellpadding="0" cellspacing="0" align="center" border="0" width="98%" style="margin-top:10px">
+    <tbody><tr style="background-color: rgb(255, 255, 255);">
+      <td valign="bottom" width="50%">
+        <input name="btn" id="btn" value="更新" class="btn" onclick="return checkAction();" type="submit">
+		&nbsp;&nbsp;&nbsp;&nbsp;
+		 <input name="delbtn" id="delbtn" value="删除" class="btn" onclick="return checkAction();" type="submit">
+		</td>
+      <td height="25" align="right">{pageStr}</td>
+    </tr>
+  </tbody></table>
+</form>
+
+</body></html>

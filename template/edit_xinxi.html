@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>编辑用户信息</title>
+<link href="{img_path}/css/style.css" rel="stylesheet" type="text/css">
+<script language="javascript" type="text/javascript" src="{js_path}/My97DatePicker/WdatePicker.js"></script>
+</head>
+<body>
+<iframe name="ifrm2" style="width:500px; height:400px; display:none" src=""></iframe>
+<form id="addform" target="ifrm2" name="addform" method="post" action="{postName}">
+<input type="hidden" name="url" value="{url}" />
+<table width="100%" border="0" align="center" cellpadding="3" cellspacing="0" class="table">
+    <tr>
+      <td height="25" colspan="4" align="center" class="title"><strong>编辑用户信息</strong></td>
+    </tr>
+	
+	 <tr>
+      <td width="19%" align="right">状态：</td>
+<td colspan="3">
+<select name="regstate">
+{regstateStr}
+</select>
+</td>
+    </tr>
+	
+    <tr>
+      <td width="19%" align="right">姓名：</td>
+<td width="33%"><input name="name" value="{name}" type="text" id="name"/></td>
+ <td width="16%" align="right">手机号码：</td>
+      <td width="32%"> <input name="mobi" value="{mobi}" type="text"/></td>
+    </tr>
+	
+	    <tr>
+           <td width="19%" align="right">所属地区：</td>
+      <td width="33%">
+	  <select name="sjg">
+	  <option value="0">请选择所属地区</option>
+	  {sjgDStr}</select></td>
+      <td width="16%" align="right">社保编号：</td>
+      <td width="32%">
+	  <input name="id_shebao" value="{id_shebao}" type="text"/></td> 
+       <!--<select name="jz_type">
+      <option value="999">请选择状态</option> 
+	  <input name="name" type="text" id="name"/></td>  
+{jz_typeStr}</select></td> -->
+    </tr>
+			    <tr>
+           <td width="19%" align="right">认证方式：</td>
+      <td width="33%">
+	  <select name="jg_grade">
+	  <option value="999">请选择认证方式</option>
+	  {jg_gradeStr}</select></td>
+	  
+           <td width="19%" align="right">身份证号码：</td>
+      <td width="33%">
+	  <input type="text" name="id_card" value="{id_card}" type="text"/>
+	  </td>
+
+    </tr>
+	
+	<!--
+	 <tr>
+           <td width="19%" align="right">上午监管时间段：</td>
+      <td width="33%">
+<select name="up_bdate">
+	 <option value="999">开始</option>
+	 {up_bdateStr}
+	 </select>--<select name="up_edate">
+	 <option value="999">结束</option>
+	 {up_up_edate}
+	 </select>
+	  </td>
+      <td align="right">下午监管时间：</td>
+<td width="32%">
+<select name="dowm_bdate">
+	 <option value="999">开始</option>
+	 {dowm_bdateStr}
+	 </select>--<select name="dowm_edate">
+	 <option value="999">结束</option>
+	 {dowm_edateStr}
+	 </select>
+</td>
+    </tr>
+		  -->
+
+	
+    <tr>
+      <td height="30" colspan="4" align="center"><input name="edit" type="submit" class="btn" id="edit" value=" 确 定 " />
+        <input name="back" type="button" class="btn" id="back" value=" 返 回 " onclick="location='{url}'"/></td>
+    </tr>  
+</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>社区管理</title>
+<link href="{img_path}/css/style.css" rel="stylesheet" type="text/css">
+<script language="javascript" type="text/javascript" src="{js_path}/My97DatePicker/WdatePicker.js"></script>
+</head>
+<body>
+<iframe name="ifrm2" style="width:500px; height:400px; display:none" src=""></iframe>
+<form id="addform" target="ifrm2" name="addform" method="post" action="{postName}">
+<table width="87%" border="0" align="center" cellpadding="3" cellspacing="0" class="table">
+    <tr>
+      <td height="25" colspan="4" align="center" class="title"><strong>添加声纹信息</strong></td>
+    </tr>
+    <tr>
+      <td width="19%">姓名：</td>
+<td width="34%"><input name="name" type="text" id="name"/></td>
+ <td width="19%">手机号码：</td>
+      <td width="28%"><input type="text" name="mobi" /></td>
+    </tr>
+	
+	    <tr>
+           <td width="19%">所属地区：</td>
+      <td width="34%">
+	  <select name="sjg">
+	  <option value="0">请选择所属地区</option>
+	  {sjgDStr}</select></td>
+      <td width="19%">监管状态：</td>
+<td width="28%"><select name="jz_type">
+ <option value="999">请选择监管状态</option>
+{jz_typeStr}</select></td>
+    </tr>
+	
+		    <tr>
+           <td width="19%">监管级别：</td>
+      <td width="34%">
+	  <select name="jg_grade">
+	  <option value="999">请选择监管级别</option>
+	  {jg_gradeStr}</select></td>
+      <td width="19%"></td>
+<td width="28%"></td>
+    </tr>
+	
+			    <tr>
+           <td width="19%">监管开始日期：</td>
+      <td width="34%">
+	  <input type="text" name="bjz_date"  onClick="WdatePicker()"/>
+	  </td>
+      <td width="19%">监管结束日期：</td>
+<td width="28%">
+ <input type="text" name="ejz_date"  onClick="WdatePicker()"/>
+</td>
+    </tr>
+	
+	 <tr>
+           <td width="19%">监管时间段（上午）：</td>
+      <td width="34%">
+	开始：
+	  <select name="up_bdate">
+	 <option value="999">请选择</option>
+	 {up_bdateStr}
+	 </select>
+	 ---
+	 结束：<select name="up_edate">
+	 <option value="999">请选择</option>
+	 {up_up_edate}
+	 </select>
+	  </td>
+      <td width="19%">监管时间段（下午）：</td>
+<td width="28%">
+开始：
+	  <select name="dowm_bdate">
+	 <option value="999">请选择</option>
+	 {dowm_bdateStr}
+	 </select>
+	 ---
+	 结束：<select name="dowm_edate">
+	 <option value="999">请选择</option>
+	 {dowm_edateStr}
+	 </select>
+</td>
+    </tr>
+	
+    <tr>
+      <td height="30" colspan="4" align="center"><input name="add" type="submit" class="btn" id="add" value=" 添 加 " />
+        <input name="back" type="button" class="btn" id="back" value=" 返 回 " onclick="history.back();"/></td>
+    </tr>  
+</table>
+</form>
+</body>
+</html>

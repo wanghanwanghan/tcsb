@@ -1,0 +1,20 @@
+2016-12-15 14:18:27 INFO PHP Unknown Error: no: 2, msg: Creating default object from empty value on line 75 in file /data/code/tcsb/service/lib/nusoap.php uri: /service/service.php, post: []
+2016-12-15 14:18:27 INFO AddIdentifyResult: 0,018201323322,1,
+2016-12-15 16:04:04 INFO PHP Unknown Error: no: 2, msg: Creating default object from empty value on line 75 in file /data/code/tcsb/service/lib/nusoap.php uri: /service/service.php, post: []
+2016-12-15 16:04:04 INFO AddIdentifyResult: 10224,13367223695,-1,
+2016-12-15 16:04:35 INFO PHP Unknown Error: no: 2, msg: Creating default object from empty value on line 75 in file /data/code/tcsb/service/lib/nusoap.php uri: /service/service.php, post: []
+2016-12-15 16:04:36 INFO AddIdentifyResult: 10225,13367223695,-1,
+2016-12-15 16:06:38 INFO PHP Unknown Error: no: 2, msg: Creating default object from empty value on line 75 in file /data/code/tcsb/service/lib/nusoap.php uri: /service/service.php, post: []
+2016-12-15 16:06:38 INFO AddIdentifyResult: 10226,013367223695,-1,
+2016-12-15 16:06:52 INFO PHP Unknown Error: no: 2, msg: Creating default object from empty value on line 75 in file /data/code/tcsb/service/lib/nusoap.php uri: /service/service.php, post: []
+2016-12-15 16:06:52 INFO AddIdentifyResult: 10226,013367223695,-3,
+2016-12-15 16:09:44 INFO PHP Unknown Error: no: 2, msg: Creating default object from empty value on line 75 in file /data/code/tcsb/service/lib/nusoap.php uri: /service/service.php, post: []
+2016-12-15 16:09:44 INFO AddIdentifyResult: 10226,013367223695,12,
+2016-12-15 16:09:55 INFO PHP Unknown Error: no: 2, msg: Creating default object from empty value on line 75 in file /data/code/tcsb/service/lib/nusoap.php uri: /service/service.php, post: []
+2016-12-15 16:09:55 INFO AddIdentifyResult: 10226,013367223695,10,reg/013367223695_1215160804|reg/013367223695_1215160804|reg/013367223695_
+2016-12-15 16:10:15 INFO PHP Unknown Error: no: 2, msg: Creating default object from empty value on line 75 in file /data/code/tcsb/service/lib/nusoap.php uri: /service/service.php, post: []
+2016-12-15 16:10:15 INFO AddIdentifyResult: 10227,013367223695,-1,
+2016-12-15 16:10:30 INFO PHP Unknown Error: no: 2, msg: Creating default object from empty value on line 75 in file /data/code/tcsb/service/lib/nusoap.php uri: /service/service.php, post: []
+2016-12-15 16:10:30 INFO AddIdentifyResult: 10227,013367223695,-3,
+2016-12-15 16:11:23 INFO PHP Unknown Error: no: 2, msg: Creating default object from empty value on line 75 in file /data/code/tcsb/service/lib/nusoap.php uri: /service/service.php, post: []
+2016-12-15 16:11:23 INFO AddIdentifyResult: 10227,013367223695,0,ver/12/15/161143_013367223695.wav

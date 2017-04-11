@@ -1,0 +1,128 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>声纹验证管理</title>
+<link href="{img_path}/css/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="{img_path}/js/jquery.js"></script>
+<script type="text/javascript" src="{img_path}/js/jquery.validate.js"></script>
+<script type="text/javascript" src="{img_path}/js/jquery.metadata.js"></script>
+<link rel="stylesheet" href="{img_path}/css/colorbox.css" />
+<script src="{img_path}/js/jquery.colorbox-min.js" type="text/javascript"></script>
+<script language="javascript" type="text/javascript" src="{js_path}/My97DatePicker/WdatePicker.js"></script>
+
+<SCRIPT language=Javascript> 
+function selecta2(){
+  for(var i=0;i<document.from.elements.length;i++){
+    var e=document.from.elements[i];
+    if((e.name).indexOf('id')!=-1) e.checked=document.from.chkall.checked;
+  }
+}
+
+</SCRIPT>
+<script>
+function checkAction()
+{
+	 var r=confirm("您确认此操作！");
+     if (r==true)
+     {
+    	return true;
+     }
+     else
+     {
+     return false;
+     }
+}
+
+function opfun(url)
+{
+                        $.colorbox({
+                            href: url,
+							iframe: true,
+                            innerWidth: 432,
+                            innerHeight: 312,
+							scrolling:false,
+                            transition: 'none',
+                            fixed: true,
+                            initialWidth: "1px",
+                            initialHeight: "1px",
+                            opacity: 0.3,
+							onOpen: function () { $('#cboxClose').remove();} 
+                        });
+}
+function opfun2(url)
+{
+                        $.colorbox({
+                            href: url,
+							iframe: true,
+                            innerWidth: 540,
+                            innerHeight: 312,
+							scrolling:false,
+                            transition: 'none',
+                            fixed: true,
+                            initialWidth: "1px",
+                            initialHeight: "1px",
+                            opacity: 0.3,
+							onOpen: function () { $('#cboxClose').remove();} 
+                        });
+}
+
+function funclose()
+{
+  	$.colorbox.close();
+}
+</script>
+</head>
+<body>
+<form action="{postName}" method="post" name="from" id="from">
+<iframe src="" name="ifrm" style="width:200px; height:50px; display:none"></iframe>
+
+  <table class="table" cellpadding="3" cellspacing="0" align="center" border="0" width="99%" style="margin-top:10px">
+    <tbody>
+	
+	<tr style="background-color: rgb(255, 255, 255);">
+      <td colspan="10" class="title" align="center"><strong>声纹验证列表</strong></td>
+    </tr>
+    <tr style="background-color: rgb(255, 255, 255);">
+	<td width="34" align="center">编号</td>
+      <td width="34" align="center">属地</td>
+      <td align="center">姓名</td>
+      <td align="center">手机</td>
+	  <td width="34" align="center">方式</td>
+	  <td align="center">时间</td>
+	  <td align="center">结果</td>
+	  <td align="center">类型</td>
+	   <td align="center">审核</td>
+      <td align="center">操作</td>
+    </tr>
+    </tbody><tbody class="trcolor">
+	<!--begin-->
+    <tr style="background-color: rgb(255, 255, 255);">
+	 		<td align="center" rowspan="2">{Tid}</td>
+          <td align="center">{oid}</td>
+          <td align="center">{name}</td>
+          <td align="center">{mobi}</td>
+		   <td align="center">{typeStr}</td>
+		  <td align="center">{yzdate}</td>
+		  <td align="center">{state}</td>
+		  <td align="center">{sw_state}</td>
+		   <td align="center" id="reg_{Tid}">{sh_state}</td>
+          <td align="center" id="op_{Tid}">{op}</td>
+      </tr>
+	  <tr>
+	 <td align="center" colspan="2"><span style="color:#FF0000">审核内容：</span></td>
+	 <td colspan="7" id="sh_{Tid}">{shjg}</td>
+	  </tr>
+	  <!--end-->
+		</tbody>
+  </table>
+  <table cellpadding="0" cellspacing="0" align="center" border="0" width="98%">
+    <tbody><tr style="background-color: rgb(255, 255, 255);">
+      <td valign="bottom" width="50%">
+       
+		</td>
+      <td height="25" align="right">{pageStr}</td>
+    </tr>
+  </tbody></table>
+</form>
+
+</body></html>

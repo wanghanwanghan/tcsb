@@ -1,0 +1,169 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>社区管理</title>
+<link href="{img_path}/css/style.css" rel="stylesheet" type="text/css">
+<script>
+var Xmlhttp;
+function createXmlhttp()
+{
+	var objhttp=null;
+	try 
+	{
+		objhttp=new ActiveXObject('Microsoft.XMLHTTP') ;
+	} 
+	catch(oc)
+	{ 
+		objhttp=null ;
+	}
+	if ( !objhttp && typeof XMLHttpRequest != 'undefined' ) { 
+		objhttp=new XMLHttpRequest();
+	}
+	return objhttp;
+}
+function selectClass(t,a,s)
+{
+	if(t==0)
+	{
+		var s1_value_input2=document.getElementById(s);
+		s1_value_input2.innerHTML="";
+		return false;
+	}
+	var URL;
+	URL='{web_path}/add_sq.php';
+	var data='username=' + t +'&type='+a+'&ajaxbtn=btn3';
+	Xmlhttp=createXmlhttp();
+	Xmlhttp.open("POST",URL,true);
+	Xmlhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+	Xmlhttp.send(data);
+	Xmlhttp.onreadystatechange=function()
+	{
+		if(Xmlhttp.readyState==4)
+		{
+			if(Xmlhttp.status==200)
+			{
+				var result;
+				result=Xmlhttp.responseText;
+				var s1_value_input=document.getElementById(s);
+				s1_value_input.innerHTML=result;
+			}
+		}
+	};
+	return false;
+}
+
+</script>
+</head>
+<body>
+<iframe name="ifrm2" style="width:500px; height:400px; display:none" src=""></iframe>
+<form id="addform" name="addform" method="post" action="{postName}">
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="0" class="table">
+    <tr>
+      <td height="25" colspan="4" align="center" class="title"><strong>添加顶级分类</strong></td>
+    </tr>
+    <tr>
+      <td>分类名称：</td>
+      <td><input name="title" type="text" id="title" size="30" maxlength="50"/></td>
+      <td width="15%">排序序号：</td>
+<td width="35%"><input name="orderid" type="text" id="orderid" value="255" size="30" maxlength="5" class="{required:true,messages:{required:' 请输入排序序号'}}"/></td>
+    </tr>
+    <tr>
+      <td height="30" colspan="4" align="center"><input name="add" type="submit" class="btn" id="add" value=" 添 加 " />
+        <input name="back" type="button" class="btn" id="back" value=" 返 回 " onclick="history.back();"/></td>
+    </tr>  
+</table>
+</form>
+
+<form id="addform" name="addform" method="post" target="ifrm2" action="{postName}">
+<div style="margin-top:20px">
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="0" class="table">
+    <tr>
+      <td height="25" colspan="4" align="center" class="title"><strong>添加二级分类</strong></td>
+    </tr>
+	<tr>
+      <td>顶级分类：</td>
+      <td><select name="topClass">
+	  <option value="0">请选择顶级分类</option>
+	  {topClass}
+	  </select></td>
+      <td width="15%" colspan="2">请选择顶级分类</td>
+    </tr>
+	
+    <tr>
+      <td>分类名称：</td>
+      <td><input name="title" type="text" id="title" size="30" maxlength="50"/></td>
+      <td width="15%">排序序号：</td>
+<td width="35%"><input name="orderid" type="text" id="orderid" value="255" size="30" maxlength="5" class="{required:true,messages:{required:' 请输入排序序号'}}"/></td>
+    </tr>
+    <tr>
+      <td height="30" colspan="4" align="center"><input name="add2" type="submit" class="btn" id="add2" value=" 添 加 " />
+        <input name="back" type="button" class="btn" id="back" value=" 返 回 " onclick="history.back();"/></td>
+    </tr>  
+</table>
+</div>
+</form>
+
+
+<form id="addform" name="addform" method="post" target="ifrm2" action="{postName}">
+<div style="margin-top:20px">
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="0" class="table">
+    <tr>
+      <td height="25" colspan="4" align="center" class="title"><strong>添加三级分类</strong></td>
+    </tr>
+	<tr>
+      <td>顶级分类：</td>
+      <td colspan="4">
+	  <select name="topClass" onchange="selectClass(this.value,1,'dpno')">
+	  <option value="0">请选择顶级分类</option>
+	  {topClass}
+	  </select>&nbsp;&nbsp;<span id="dpno"></span>
+	  </td>
+    </tr>
+	
+    <tr>
+      <td>分类名称：</td>
+      <td><input name="title" type="text" id="title" size="30" maxlength="50"/></td>
+      <td width="15%">排序序号：</td>
+<td width="35%"><input name="orderid" type="text" id="orderid" value="255" size="30" maxlength="5" class="{required:true,messages:{required:' 请输入排序序号'}}"/></td>
+    </tr>
+    <tr>
+      <td height="30" colspan="4" align="center"><input name="add3" type="submit" class="btn" id="add3" value=" 添 加 " />
+        <input name="back" type="button" class="btn" id="back" value=" 返 回 " onclick="history.back();"/></td>
+    </tr>  
+</table>
+</div>
+</form>
+
+
+<form id="addform" name="addform" method="post" target="ifrm2" action="{postName}">
+<div style="margin-top:20px">
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="0" class="table">
+    <tr>
+      <td height="25" colspan="4" align="center" class="title"><strong>添加四级分类</strong></td>
+    </tr>
+	<tr>
+      <td>顶级分类：</td>
+      <td colspan="4">
+	  <select name="topClass" onchange="selectClass(this.value,2,'dpno2')">
+	  <option value="0">请选择顶级分类</option>
+	  {topClass}
+	  </select>&nbsp;&nbsp;<span id="dpno2"></span>
+	  </td>
+    </tr>
+	
+    <tr>
+      <td>分类名称：</td>
+      <td><input name="title" type="text" id="title" size="30" maxlength="50"/></td>
+      <td width="15%">排序序号：</td>
+<td width="35%"><input name="orderid" type="text" id="orderid" value="255" size="30" maxlength="5" class="{required:true,messages:{required:' 请输入排序序号'}}"/></td>
+    </tr>
+    <tr>
+      <td height="30" colspan="4" align="center"><input name="add4" type="submit" class="btn" id="add4" value=" 添 加 " />
+        <input name="back" type="button" class="btn" id="back" value=" 返 回 " onclick="history.back();"/></td>
+    </tr>  
+</table>
+</div>
+</form>
+</body>
+</html>

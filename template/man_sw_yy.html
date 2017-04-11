@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>声纹验证管理</title>
+<link href="{img_path}/css/style.css" rel="stylesheet" type="text/css">
+<script>
+function opfun(a,b)
+{
+	var btn,view,url,src2;
+	btn="td_"+a;
+	view=document.getElementById(btn);
+	src2="{web_path}/bf_yy.php?yurl="+b;
+	view.innerHTML="<iframe frameborder='0' scrolling='no' style='width:308px;height:43px;' src='"+src2+"'></iframe>";
+}
+</script>
+</head>
+<body>
+<form action="{postName}" method="post" name="from" id="from">
+  <table class="table" cellpadding="3" cellspacing="0" align="center" border="0" width="100%">
+    <tbody>
+	<tr style="background-color: rgb(255, 255, 255);">
+      <td colspan="2" class="title" align="left"><table border="0" width="100%"><tr><td style="border:0px;" align="left"><strong>&nbsp;声纹语音列表</strong></td><td style="border:0px;" align="right"><a href="###" onclick="parent.funclose()" style="text-decoration:underline; color:#FFFFFF">关闭窗口</a></td></tr></table></td>
+    </tr>
+    <tr style="background-color: rgb(255, 255, 255);">
+      <td align="center">创建时间</td>
+      <td align="center">语音</td>
+    </tr>
+    </tbody><tbody class="trcolor">
+	<!--begin-->
+    <tr style="background-color: rgb(255, 255, 255);">
+          <td align="center" valign="middle">{cdate}</td>
+          <td align="center" colspan="2">
+		  <table width="100%" border="0">
+		  <tr>
+		  <!--begin2-->
+		  <td id="td_{sid}" style="border:0px">
+		{sw_url2}
+		  </td>
+		  <td width="20%" style="border:0px">{downUrl}</td>
+		  </tr>
+		  <!--end2-->
+		  </table>
+		 </td>
+      </tr>
+	  <!--end-->
+		</tbody>
+  </table>
+</form>
+
+</body></html>

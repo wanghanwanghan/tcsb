@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>声纹登记管理</title>
+<link href="{img_path}/css/style.css" rel="stylesheet" type="text/css">
+<script language="javascript" type="text/javascript" src="{js_path}/My97DatePicker/WdatePicker.js"></script>
+
+<SCRIPT language=Javascript> 
+function selecta2(){
+  for(var i=0;i<document.from.elements.length;i++){
+    var e=document.from.elements[i];
+    if((e.name).indexOf('id')!=-1) e.checked=document.from.chkall.checked;
+  }
+}
+</SCRIPT>
+<script>
+function checkAction()
+{
+	 var r=confirm("您确认此操作！");
+     if (r==true)
+     {
+    	return true;
+     }
+     else
+     {
+     return false;
+     }
+}
+</script>
+</head>
+<body>
+<iframe name="ifrm2" style="width:500px; height:400px; display:none" src=""></iframe>
+<form id="addform" target="ifrm2" name="addform" method="post" action="{postName}">
+<table width="100%" border="0" align="center" cellpadding="3" cellspacing="0" class="table">
+    <tr>
+      <td height="25" colspan="4" align="center" class="title"><strong>用户注册</strong></td>
+    </tr>
+    <tr>
+      <td width="17%" align="right">姓名：</td>
+<td width="33%"><input name="name" type="text" id="name"/></td>
+ <td width="17%" align="right">手机号码：</td>
+      <td width="33%"><input type="text" name="mobi" /></td>
+    </tr>
+	
+	    <tr>
+           <td width="17%" align="right">所属地区：</td>
+      <td width="33%">
+	  <select name="sjg">
+	  <option value="0">请选择所属地区</option>
+	  {sjgDStr}</select></td>
+      <td width="17%" align="right">社保编号：</td>
+      <td width="33%">
+	  <input name="id_shebao" type="text"/></td> 
+       <!--<select name="jz_type">
+      <option value="999">请选择状态</option> 
+	  <input name="name" type="text" id="name"/></td>  
+{jz_typeStr}</select></td> -->
+    </tr>
+			    <tr>
+           <td width="17%" align="right">身份证号码：</td>
+      <td width="33%">
+	  <input type="text" name="id_card"/>
+	  </td>
+      <td width="17%" align="right">地址：</td>
+<td width="33%">
+ <input type="text" name="address" />
+</td>
+    </tr>
+	<!--
+	 <tr>
+           <td width="17%" align="right">上午监管时间：</td>
+           <td width="33%"><select name="up_bdate">
+	 <option value="999">开始时间</option>
+	 {up_bdateStr}
+	 </select>--<select name="up_edate">
+	 <option value="999">结束时间</option>
+	 {up_up_edate}
+	 </select>
+	  </td>
+      <td width="17%" align="right">下午监管时间：</td>
+      <td width="33%"><select name="dowm_bdate">
+	 <option value="999">开始时间</option>
+	 {dowm_bdateStr}
+	 </select>--<select name="dowm_edate">
+	 <option value="999">结束时间</option>
+	 {dowm_edateStr}
+	 </select>
+</td>
+    </tr>
+	-->	
+
+	  <tr>
+           <td width="17%" align="right">认证方式：</td>
+      <td width="33%">
+	  <select name="jg_grade">
+	  <option value="999">请选择认证方式</option>
+	  {jg_gradeStr}</select></td>
+      <td width="17%" align="right">备注：</td>
+      <td width="33%">
+	  <input name="memory" type="text"/></td> 
+
+    <tr>
+      <td height="30" colspan="4" align="center"><input name="add" type="submit" class="btn" id="add" value=" 添 加 " /></td>
+    </tr>  
+</table>
+</form>
+
+
+</body></html>

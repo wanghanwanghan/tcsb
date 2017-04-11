@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>管理员管理</title>
+<link href="{img_path}/css/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="{img_path}/js/jquery.js"></script>
+<script type="text/javascript" src="{img_path}/js/jquery.validate.js"></script>
+<script type="text/javascript" src="{img_path}/js/jquery.metadata.js"></script>
+<script type="text/javascript" src="{img_path}/js/otree.js"></script>
+
+</head>
+<body>
+<form id="editform" name="editform" method="post" action="">
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="0" class="table">
+    <tr>
+      <td height="25" colspan="2" align="center" class="title"><strong>修改管理员</strong></td>
+    </tr>
+    <tr>
+      <td>用户名：</td>
+      <td><input name="username" type="text" id="username" size="30" maxlength="50" value="{userName}" readonly="readonly" class="{required:true,messages:{required:' 请输入用户名'}}"/></td>
+    </tr>
+    <tr>
+      <td>密&nbsp;&nbsp;&nbsp;&nbsp;码：</td>
+      <td><input name="password" type="password" id="password" size="30" maxlength="50" class="{required:true,messages:{required:' 请输入密码'}}"/></td>
+    </tr>
+    <tr>
+        <td>角&nbsp;&nbsp;&nbsp;&nbsp;色：</td>
+        <td> <select name="role_id">
+            <option value="0">请选择角色</option>
+            {roleListOptionStr}
+        </td>
+    </tr>
+    <tr>
+        <td>属&nbsp;&nbsp;&nbsp;&nbsp;地：</td>
+        <td>
+            <div id="areaTree" style="width:200px; height:360px; overflow:auto; padding:0; border:solid 1px #ddd;float:left;margin-left:10px;">
+                <ul id="lstArea" style="display: none">
+                    {areaListr}
+                </ul>
+                <div>请设置人员属地：</div>
+            </div>
+        </td>
+    </tr>
+    <tr>
+      <td height="30" colspan="2" align="center">
+        <input type="hidden" name="id" value="{userId}" />
+        <input type="hidden" name="returnurl" value="">
+        <input name="edit" type="submit" class="btn" id="edit" value=" 修 改 " />
+        <input name="back" type="button" class="btn" id="back" value=" 返 回 " onclick="history.back();"/></td>
+    </tr>
+</table>
+</form>
+</body>
+<script type="text/javascript">
+
+    $(document).ready(function() {
+        $("#editform").validate();
+    });
+
+    var o2 = new oTree('o2', document.getElementById('areaTree'), {
+        showCheckBox:true,showSubNode:true,showIcon:true,
+        keyEvent: true, //是否启用键盘(上、下键)事件
+        showLine:true,
+    });
+    $('#areaTree').css('height','');
+    o2.htmlToTree({obj:document.getElementById('lstArea'),isSort:true});
+</script>
+</html>

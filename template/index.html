@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>社保声纹识别系统</title>
+<link href="{img_path}/css/admin.css" rel="stylesheet" type="text/css" />
+<script>
+var total = 8 ;
+function showContent(labName,contentName,labID){
+	for(i=1;i<=total;i++){
+		if(i==labID){
+			document.getElementById(contentName+i).style.display="block";
+			document.getElementById(labName+i).className="active";
+		}
+		else{
+			document.getElementById(contentName+i).style.display="none";
+			document.getElementById(labName+i).className="";
+		}
+	}
+
+}
+</script>
+</head>
+<body>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" background="{img_path}/images/topBg2.jpg">
+  <tr>
+    <td height="77" valign="top">
+	<div style="color:white; position:absolute;left:10px;top:20px"><font face="微软雅黑" size="8">	人社局养老身份认证声纹识别系统</font>
+	</div>
+    <div style="position:absolute;right:-3px">
+  <div class="topMenu">
+	{topMenuStr}
+  </div>
+</div>
+    </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="30" background="{img_path}/images/i01.jpg">
+	<table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="265" style="padding-left:12px;">欢迎您，{sin_uname}&nbsp;&nbsp; <a href="{web_path}/exit.php">[安全退出]</a></td>
+          <td></td>
+          <td width="250" align="right"><div id="Time">
+              <script>document.getElementById('Time').innerHTML=new Date().toLocaleString()+''.charAt(new Date().getDay());setInterval("document.getElementById('Time').innerHTML=new Date().toLocaleString()+''.charAt(new Date().getDay());",1000);</script>
+            </div></td>
+        </tr>
+    </table>
+	</td>
+  </tr>
+  <tr>
+    <td height="3" background="{img_path}/images/i02.jpg"></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="180" valign="top"><img src="{img_path}/images/left01.jpg" width="180" height="13" /></td>
+    <td width="5" valign="top" background="{img_path}/images/i03.jpg"></td>
+    <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="117"><img src="{img_path}/images/right01.jpg" width="117" height="13" /></td>
+          <td width="100%" height="13" background="{img_path}/images/right03.jpg"></td>
+          <td width="38"><img src="{img_path}/images/right02.jpg" width="38" height="13" /></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="180" align="center" valign="top" background="{img_path}/images/left02.jpg">
+	
+	<table width="173" border="0" cellspacing="0" cellpadding="0">
+	    <tr>
+          <td align="center" ><img src="{img_path}/images/nation.jpg" width="110" height="110" /></td>
+        </tr>
+		<tr>
+          <td width="173" height="15"></td>
+        </tr>
+        <tr>
+          <td><img src="{img_path}/images/i05.jpg" width="173" height="31" /></td>
+        </tr>
+        <tr>
+          <td background="{img_path}/images/i06.jpg" class="leftMenu">
+		{subMenuStr}
+          </td>
+        </tr>
+        <tr>
+          <td><img src="{img_path}/images/i07.jpg" width="173" height="10" /></td>
+        </tr>
+      </table></td>
+    <td width="5" valign="top" background="{img_path}/images/i03.jpg">&nbsp;</td>
+    <td valign="top" style="background:url({img_path}/images/right07.jpg) repeat-y left;"><div class="mainRightR">
+        <iframe width="100%" height="100%" name=mainframe src="{web_path}/sw.php" frameBorder=0 scrolling=yes></iframe>
+      </div></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td width="180" valign="top"><img src="{img_path}/images/left03.jpg" width="180" height="13" /></td>
+    <td width="5" valign="top" background="{img_path}/images/i03.jpg"></td>
+    <td valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="277"><img src="{img_path}/images/right06.jpg" width="27" height="13" /></td>
+          <td width="100%" height="13" background="{img_path}/images/right04.jpg"></td>
+          <td width="27"><img src="{img_path}/images/right05.jpg" width="27" height="13" /></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td height="23" align="center" background="{img_path}/images/i04.jpg" style="color:#bfe1e5; font-size:12px; text-transform:uppercase"> </td>
+  </tr>
+</table>
+</body>
+</html>

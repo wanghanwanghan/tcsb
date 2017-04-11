@@ -1,0 +1,42 @@
+@charset "utf-8";
+body {font-family: Verdana, Arial;font-size: 12px;*font-size: 11px;color: #333;margin: 0px;padding: 0px; line-height:20px;}
+ul{ margin:0; padding:0; list-style:none;}
+form{ margin:0; padding:0;}
+
+a{ color:#333; text-decoration:none;}
+a:hover{ color:#cc0000; text-decoration:underline;}
+.aBlue a{ color:#0088dd; text-decoration:none;}
+.aBlue a:hover{ color:#0088dd; text-decoration:underline;}
+
+
+#DivMainLogin{ width:1000px; height:612px; margin:0 auto;background:url(/images/topBg.jpg) no-repeat top;text-align:center;}
+#DivLoginLeft{ width:360px; float:left; margin-top:162px; margin-left:132px; display:inline}
+#DivLoginCenter{ width:2px; float:left; height:376px; background:url(images/loginLine.jpg) no-repeat; margin-top:100px;}
+#DivLoginRight{ float:left; margin-top:210px; margin-left:46px;text-align:left;}
+#LeftFonts{ margin:15px 0 0 30px; line-height:24px;}
+#TitleFonts{ margin:5px 0 0 30px; line-height:24px;}
+
+.LoginInp{ background:url(images/inp.jpg) repeat-x top; border:1px solid #ccc; width:200px; margin-top:8px; padding:1px 3px;}
+.FormRow2{ line-height:24px; margin:10px 0 0 44px;}
+.mainRightR{ background:url(images/right08.jpg) repeat-y right; clear:both; height:500px; min-height:500px; padding:0px 0px 0px 20px;}
+
+
+.topMenu{ float:right; margin-right:12px; margin-top:41px;}
+.topMenu a{ float:left; margin-left:2px; background:url(images/topMenu.gif) no-repeat; width:77px; height:30px; line-height:30px; text-align:center; color:#436799; margin-top:6px;}
+.topMenu a:hover{ float:left; margin-top:0px; margin-left:3px; background:url(/images/topMenuActive.gif) no-repeat; width:83px; height:40px; line-height:40px; text-align:center; color:#436799; color:#fff; font-weight:bold; text-decoration:none;}
+.topMenu .active{ float:left; margin-top:0px; margin-left:3px; background:url(/images/topMenuActive.gif) no-repeat; width:83px; height:40px; line-height:40px; text-align:center; color:#436799; color:#fff; font-weight:bold;}
+.topMenu .active:hover{ color:#fff; text-decoration:none;}
+
+.leftMenu a{ width:169px; line-height:29px; background:#fff url(/images/i08.jpg) repeat-x; display:block; text-align:left; text-indent:32px; color:#185c82;}
+.leftMenu a:hover{ color:#185c82; text-decoration:none;}
+.leftSubMenu a{line-height:27px; background:; border-bottom:1px solid #cbdae2;color:#444;}
+.leftSubMenu a:hover{ color:#000; text-decoration:none;background:#f5f5f5;}
+
+.table{ border:1px solid #aed7e8; border-collapse:collapse; padding:4px;}
+.table td{border:1px solid #aed7e8; border-collapse:collapse; padding:4px;}
+
+.btn{ background:#fff url(images/btn.jpg) repeat-x bottom; color:#1a4a82; border:1px solid #accde7; height:24px; cursor:pointer; padding:0 5px;}
+.title {
+	color: #FFFFFF;
+	background-color:#356aab;
+}

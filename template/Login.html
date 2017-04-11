@@ -1,0 +1,71 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>社保声纹识别系统</title>
+<link href="{img_path}/css/style.css" rel="stylesheet" type="text/css" />
+<script>
+function submitfrm()
+{
+	var userName,uPwd;
+	userName=document.getElementById("userName");
+	uPwd=document.getElementById("uPwd");
+	verifycode=document.getElementById("verifycode");
+	if(userName.value=="")
+	{
+		alert("用户名不能空！");
+		return false;
+	}
+	if(uPwd.value=="")
+	{
+		alert("密码不能空！");
+		return false;
+	}
+	if(verifycode.value=="")
+	{
+		alert("验证码不能空！");
+		return false;
+	}
+}
+function fleshVerify()
+{
+	var verifyImg;
+	verifyImg=document.getElementById("verifyImg");
+	verifyImg.src='{web_path}/code.php?t='+(new Date().getTime());
+
+}
+</script>
+<style> 
+body{text-align:center} 
+</style> 
+</head>
+<body style="background:url({img_path}/images/bg.jpg) repeat-x top;">
+<script language="javascript">         
+if(self != top)
+top.location = self.location;       
+</script>
+<div id="DivMainLogin">
+	<div id="DivLoginLeft" align="center">
+	    <img src="{img_path}/images/nation.jpg" width="150" height="150"  />	
+		<br><br>
+        <div width="180" height="180">        
+	    <font face="微软雅黑" size="4">	<strong>养老身份认证社保声纹识别系统</strong></font> 
+        </div>		
+    </div>
+	<div id="DivLoginCenter"></div>
+	<div id="DivLoginRight">
+    <form id="form1" name="form1" method="post" action="{postName}" onsubmit="javascript:return submitfrm()">
+	<input type="hidden" name="subBtn" value="提交" />
+        用户名：<input name="userName" type="text" class="LoginInp" id="userName" />
+        <br>
+        密　码：<input name="uPwd" type="password" class="LoginInp" id="uPwd" />&nbsp;&nbsp;<br>
+		 验证码：<input name="verifycode" type="text" class="LoginInp" id="verifycode" style="width:145px;" />
+      <a href="javascript:fleshVerify()"><img src="{web_path}/code.php" name="verifyImg" border="0" align="absbottom" id="verifyImg" title="如果您无法识别验证码，请点图片更换" /></a><br /><br />
+      <div class="FormRow2">
+        <input type="image" name="imageField" id="imageField" src="{img_path}/images/btnBg.jpg" align="absmiddle" style="margin:8px 0 0 4px;" />
+      </div>
+    </form>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>修改密码</title>
+    <link href="{img_path}/css/style.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="{img_path}/js/jquery.js"></script>
+    <script type="text/javascript" src="{img_path}/js/jquery.validate.js"></script>
+    <script type="text/javascript" src="{img_path}/js/jquery.metadata.js"></script>
+</head>
+<body>
+<form id="editpasswd" name="editpasswd" method="post" action="">
+    <table width="98%" border="0" align="center" cellpadding="3" cellspacing="0" class="table">
+        <tr>
+            <td height="25" colspan="2" align="center" class="title"><strong>修改密码</strong></td>
+        </tr>
+        <tr>
+            <td>原密码：</td>
+            <td><input name="org_password" type="password" id="org_password" size="30" maxlength="50" class="{required:true,messages:{required:' 请输入原密码'}}"/></td>
+        </tr>
+        <tr>
+            <td>新密码：</td>
+            <td><input name="password" type="password" id="password" size="30" maxlength="50" class="{required:true,messages:{required:' 请输入新密码'}}"/></td>
+        </tr>
+        <tr>
+            <td>新密码：</td>
+            <td><input name="password2" type="password" id="password2" size="30" maxlength="50" class="{required:true,messages:{required:' 请再次输入新密码'}}"/></td>
+        </tr>
+        <tr>
+            <td height="30" colspan="2" align="center">
+                <input name="btnpasswd" type="submit" class="btn" id="btnpasswd" value=" 确 认 " />
+            </td>
+        </tr>
+    </table>
+</form>
+</body>
+<script type="text/javascript">
+
+    $(document).ready(function() {
+        $("#editpasswd").validate();
+    });
+</script>
+</html>

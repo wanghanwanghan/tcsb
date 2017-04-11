@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>角色管理</title>
+<link href="{img_path}/css/style.css" rel="stylesheet" type="text/css">
+<script language="javascript" src="{img_path}/js/jquery.js"></script>
+</head>
+<body>
+<table width="98%" border="0" align="center" cellpadding="3" cellspacing="0" class="table">
+    <tr>
+        <td colspan="3" height="40" align="left">&nbsp;&nbsp;<a style="font-size:20px" class="btn" href="add_role.php">添加角色</a></td>
+    </tr>
+  <tr>
+    <td colspan="4" align="center" class="title"><strong>角色管理</strong></td>
+  </tr>
+  <tr>
+    <td width="10%" align="center">ID</td>
+    <td width="30%" align="center">名称</td>
+    <td width="30%" align="center">说明</td>
+    <td width="30%" align="center">操作</td>
+  </tr>
+  <tbody class="trcolor">
+<!--begin-->
+  <tr>
+        <td align="center">{ID}</td>
+        <td align="center"><a href="edit_role.php?id={ID}">{roleName}</a></td>
+        <td align="center">{remark}</td>
+        <td align="center"><a href="edit_role.php?id={ID}">编辑</a> | <a onclick="{if(confirm('您确认将所选角色删除?')){return true;}return false;}"  href="del_role.php?id={ID}">删除</a></td>
+      </tr>
+<!--end-->
+	  </tbody>
+</table>
+</body>
+</html>
