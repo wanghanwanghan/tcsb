@@ -6,6 +6,7 @@ require($cfg_inc_common_path);
 // 2024 03 20 wh
 $a = 123;
 $b = 321;
+$c = 112233;
 
 function easyswoole()
 {
