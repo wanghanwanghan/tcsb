@@ -4,8 +4,9 @@
 #$inc_tieValue //
 #$inc_urlPath  //صַ
 */
+// 123213213213
 // XueSi test 1231232131231232132321323
-//1231232131 XueSi test
+// 1231232131 XueSi test
 $resultBuffer=implode("",file($template_result_path));
 $resultBuffer=str_replace("{title}",$inc_title,$resultBuffer);
 $resultBuffer=str_replace("{tieValue}",$inc_tieValue,$resultBuffer);
